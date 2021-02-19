@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.dropdown {
+    @apply float-left overflow-hidden;
+}
+
+.dropdown-content {
+    @apply hidden absolute z-10 bg-seashell-peach-500 w-full left-0;
+}
+
+.dropdown:hover .dropdown-content {
+    @apply block;
+}
+
+
+.dropdown-columns {
+    @apply float-left w-1/4 p-10 h-auto;
+}
+
+.dropdown-columns .dropdown-items {
+    @apply float-none p-10 block bg-black;
+}
+
+
+
+.nested-content{
+    @apply hidden;
+  }
+  
+  .nested-dropdown:hover > .nested-content{
+    @apply block;
+  }
+
+.sort-dropdown{
+    @apply relative;
+}
+
+.sort-dropdown-content{
+    @apply hidden absolute;
+}
+
+.sort-dropdown:hover > .sort-dropdown-content{
+    @apply block;
+}
+
+.out-of-stock{
+    @apply hidden;
+}
+
+.cards:hover > .out-of-stock {
+
+    @apply flex;
+}

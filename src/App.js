@@ -1,33 +1,30 @@
-import { useState } from 'react';
-import './App.scss';
-import Login from './components/login';
-import NotFound from './components/NotFound';
-import TrackOrder from './components/TrackOrder';
-import notfound from './assets/noimage.png';
-import ProductImage from './components/ProductImage';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "./App.css";
+import "./App.scss";
+import Header from "./components/header/Header";
+import Products from "./components/products/Products";
+import Carts from "./components/carts/Carts";
+import Footer from "./components/footer/Footer";
+import NotFound from "./components/notfound/NotFound";
 
-function App() {
-  const [track, setTrack] = useState(false)
-  return (
-    <div>
-      <div className="text-center">
-        <h1 className="h1 ">Hello world</h1>
-        <div>
-          <button onClick={()=>{
-            setTrack(true)
-          }}
-          >track order</button>
-          <button onClick={()=>{
-            setTrack(false)
-          }}
-          >Login</button>
-        </div>
+class App extends Component {
+
+  render() {
+    return (
+      <div>
+        <Router>
+          <Header />
+          <Switch>
+            <Route path="/" exact component={Products} />
+            <Route path="/carts" exact component={Carts} />
+            <Route path="/notfound" exact component={NotFound} />
+          </Switch>
+          <Footer />
+        </Router>
       </div>
-      <ProductImage img="sample.png" notFound={notfound} />
-      <NotFound />
-      {!track?<Login />:<TrackOrder />}
-    </div>
-  );
+    );
+  }
 }
 
 export default App;

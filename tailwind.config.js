@@ -1,11 +1,83 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    borderColor: (theme) => ({
+      ...theme("colors"),
+      DEFAULT: theme("colors.gray.300", "currentColor"),
+      primary: "#E2886C",
+      secondary: "#ffed4a",
+      danger: "#e3342f",
+    }),
+    textColor: {
+      primary: "#E2886C",
+      secondary: "#ffed4a",
+      danger: "#e3342f",
+    },
+    extend: {
+      translate: {
+        '1/7': '-110%',
+       },
+      ringColor: {
+        copperfield: {
+          DEFAULT: "#E2886C",
+          50: "#FFFFFF",
+          100: "#FFFFFF",
+          200: "#FBEFEC",
+          300: "#F3CDC1",
+          400: "#EAAA97",
+          500: "#E2886C",
+          600: "#DA6641",
+          700: "#C24B26",
+          800: "#973B1E",
+          900: "#6D2A15",
+        },
+      },
+      colors: {
+        footer_gray: "#2A2A2A",
+        gray_dark: "#292B2A",
+        skin_light: "#FFF3EB",
+        skin_thin: "#F9DED1",
+        skin_dark: "#E2886C",
+        white_light: "#99999929",
+        white_dark: "#F2F2F2",
+        gray_light: "#5D5D5D",
+        gray_o_5: "rgba(0, 0, 0, 0.1)",
+        white_o_3: "rgba(250, 250, 250, 0.5)",
+        "seashell-peach": {
+          DEFAULT: "#FFF3EB",
+          50: "#FFFFFF",
+          100: "#FFFFFF",
+          200: "#FFFFFF",
+          300: "#FFFFFF",
+          400: "#FFFFFF",
+          500: "#FFF3EB",
+          600: "#FFD4B8",
+          700: "#FFB685",
+          800: "#FF9752",
+          900: "#FF791F",
+        },
+        givry: {
+          DEFAULT: "#F9DED1",
+          50: "#FFFFFF",
+          100: "#FFFFFF",
+          200: "#FFFFFF",
+          300: "#FFFFFF",
+          400: "#FFFEFE",
+          500: "#F9DED1",
+          600: "#F3BEA4",
+          700: "#ED9D77",
+          800: "#E77D4A",
+          900: "#E15D1D",
+        },
+      },
+    },
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ['checked'],
+      borderColor: ['checked'],
+    },
   },
   plugins: [],
-}
+};

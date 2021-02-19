@@ -1,5 +1,5 @@
 {
-  "name": "floweshoptask",
+  "name": "adobe-screen",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,14 +9,18 @@
     "@testing-library/user-event": "^12.7.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
+    "react-slick": "^0.28.0",
+    "slick-carousel": "^1.8.1",
     "web-vitals": "^1.1.0"
   },
   "scripts": {
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
+    "build:css": "tailwind build src/index.css -o src/App.css",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

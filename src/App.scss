@@ -1,8 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 $grey:  #777;
-$grey2: #dfe3e4;
+$grey2: #cfd5d6;
 $red: #E2886C;
 $white: #fff;
+.text-white{
+  color: $white;
+}
+.text-black{
+  color: black;
+}
+.bg-white{
+  background-color: $white;
+}
+.text-gray-400{
+  caret-color: $grey2;
+}
 .font-lora{
     font-family: 'lora','sans';
 }
