@@ -1,22 +1,30 @@
 import { useState } from 'react';
 import './App.scss';
 import Login from './components/login';
+import NotFound from './components/NotFound';
 import TrackOrder from './components/TrackOrder';
+import notfound from './assets/notfound.png';
+import ProductImage from './components/ProductImage';
+
 function App() {
   const [track, setTrack] = useState(false)
   return (
-    <div className="bg-green-500">
-      <h1 className="h1 text-center">Hello world</h1>
-      <div className="absolute right-5">
-        <button onClick={()=>{
-          setTrack(true)
-        }}
-        >track order</button>
-        <button onClick={()=>{
-          setTrack(false)
-        }}
-        >Login</button>
+    <div>
+      <div className="text-center">
+        <h1 className="h1 ">Hello world</h1>
+        <div>
+          <button onClick={()=>{
+            setTrack(true)
+          }}
+          >track order</button>
+          <button onClick={()=>{
+            setTrack(false)
+          }}
+          >Login</button>
+        </div>
       </div>
+      <ProductImage img="sample.png" notFound={notfound} />
+      <NotFound />
       {!track?<Login />:<TrackOrder />}
     </div>
   );

@@ -4,7 +4,7 @@ const TrackOrder = () => {
     const [showBlock, setShowBlock] = useState(true);
     return (
         <div className={!showBlock?"hidden":"block"+"z-10 fixed bg-opacity-25 w-screen h-screen absolute top-0 bg-gray-900 "}>
-            <div className="w-screen relative sm:w-screen md:w-5/12 lg:w-5/12 bg-gray-100 h-screen">
+            <div className="w-full relative sm:w-screen md:w-5/12 lg:w-5/12 bg-gray-100 h-screen">
                 <div className="flex justify-center">
                     <div  className="absolute top-3 right-3">
                         <button className="font-bold" onClick={

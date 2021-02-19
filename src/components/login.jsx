@@ -6,7 +6,7 @@ const Login = () => {
     const [showBlock, setShowBlock] = useState(true);
     const [login, setLogin] = useState(true);
     return (
-        <div className={!showBlock?"hidden":"block"+"z-10 fixed bg-opacity-25 w-screen h-screen absolute top-0 bg-gray-900 "}>
+        <div className={!showBlock?"hidden":"block"+"z-10 fixed bg-opacity-25 w-full h-screen absolute top-0 bg-gray-900 "}>
             <div className="w-screen relative sm:w-screen md:w-5/12 lg:w-5/12 bg-gray-100 h-screen">
                 <div className="flex justify-center">
                     <div  className="absolute top-5 right-10">
@@ -66,7 +66,7 @@ const Logins=()=>{
                         <label className="relative text-sm -top-8 px-3" htmlFor="password">Password<sup className="text-red-400">*</sup></label>
                     </div>
                     <div className="flex justify-between pb-2">
-                        <div className="flex whitespace-nowrap w-3/12">
+                        <div className="flex whitespace-nowrap w-4/12">
                             <input className="p-20" type="checkbox" name="remember" id="remember"/>
                             <span className="text-xs relative bottom-0.5">Remember me</span>
                         </div>
