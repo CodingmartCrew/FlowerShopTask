@@ -66,8 +66,8 @@ const Logins=()=>{
                         <label className="relative text-sm -top-8 px-3" htmlFor="password">Password<sup className="text-red-400">*</sup></label>
                     </div>
                     <div className="flex justify-between pb-2">
-                        <div className="flex whitespace-nowrap w-4/12">
-                            <input className="" type="checkbox" name="remember" id="remember"/>
+                        <div className="flex whitespace-nowrap w-3/12">
+                            <input className="p-20" type="checkbox" name="remember" id="remember"/>
                             <span className="text-xs relative bottom-0.5">Remember me</span>
                         </div>
                         <div className="flex">
