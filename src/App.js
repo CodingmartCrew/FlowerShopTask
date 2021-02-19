@@ -3,7 +3,7 @@ import './App.scss';
 import Login from './components/login';
 import NotFound from './components/NotFound';
 import TrackOrder from './components/TrackOrder';
-import notfound from './assets/notfound.png';
+import notfound from './assets/noimage.png';
 import ProductImage from './components/ProductImage';
 
 function App() {
