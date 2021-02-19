@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import fb from '../assets/Register/fb.svg';
-import google from '../assets/Register/google.svg';
-import twitter from '../assets/Register/twitter.svg';
+import fb from '../assets/fb.svg';
+import google from '../assets/google.svg';
+import twitter from '../assets/twitter.svg';
 const Login = () => {
     const [showBlock, setShowBlock] = useState(true);
     const [login, setLogin] = useState(true);
